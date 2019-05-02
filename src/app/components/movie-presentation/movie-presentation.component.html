@@ -1,3 +1,8 @@
-<p>
-  movie-presentation works!
-</p>
+<div class="card m-2" style="width: 18rem; min-height: 50rem;">
+  <img class="card-img-top" style="height: 30rem;" src="{{products.imageUrl}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{products.name}}</h5>
+    <p class="card-text">Price: {{products.price}}</p>
+    <a (click)="addToCart()" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>

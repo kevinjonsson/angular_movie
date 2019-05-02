@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IData } from 'src/app/interfaces/IData';
 
 @Component({
   selector: 'app-movie-presentation',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-presentation.component.css']
 })
 export class MoviePresentationComponent implements OnInit {
+  @Input() products: IData[];
 
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

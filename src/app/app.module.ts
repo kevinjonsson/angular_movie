@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { MoviePresentationComponent } from './components/movie-presentation/movie-presentation.component';
 import { MovieShopComponent } from './components/movie-shop/movie-shop.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
