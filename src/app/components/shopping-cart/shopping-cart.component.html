@@ -1,7 +1,9 @@
 <div class="cart container-fluid" style="height: 100%;">
   <div style="position: sticky; top: 5rem;">
-    <p style="color: black; padding-left: 1rem;">
-      shopping-cart works!
-    </p>
+    <ul style="color: black; padding-left: 1rem;">
+        <li *ngFor="let cartMovie of cartMovies">
+            {{cartMovie.id}}{{cartMovie.name}}
+        </li>
+    </ul>
   </div>
 </div>

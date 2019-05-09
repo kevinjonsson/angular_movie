@@ -2,7 +2,7 @@
   <a [routerLink]="['/details', products.id]"><img class="card-img-top" style="min-height: 25rem; max-height: 25rem;" src="{{products.imageUrl}}" alt="Card image cap"></a>
   <div class="card-body row justify-content-around">
     <div style="border-right: 1px solid white; padding-right: 1rem;">
-      <a (click)="addToCart()" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to cart</a>
+      <a (click)="addToCart(products)" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to cart</a>
     </div>
     <div>
       <p class="card-text mt-1" style="color:whitesmoke;">Price: {{products.price}}</p>

@@ -18,8 +18,9 @@ export class MoviePresentationComponent implements OnInit {
 
   cartValue = true;
 
-  addToCart(){
+  addToCart(movie){
     this._interactionService.sendCartItem(this.cartValue);
+    this._interactionService.sendCartProduct(movie);
   }
 
 }

@@ -24,8 +24,8 @@ export class DetailsComponent implements OnInit {
     });
   }
 
-  addToCart(){
-    this._interactionService.sendCartItem(this.cartValue);
+  addToCart(movie){
+    this._interactionService.sendCartProduct(movie);
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InteractionService } from 'src/app/services/interaction.service';
+import { IData } from 'src/app/interfaces/IData';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _interactionService: InteractionService) { }
+
+  cartMovies: IData[] = [];
 
   ngOnInit() {
+    this._interactionService.cartMovie$.subscribe(
+      movie => {
+        this.cartMovies.push(movie);
+      }
+    )
   }
 
 }
