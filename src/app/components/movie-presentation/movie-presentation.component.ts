@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IData } from 'src/app/interfaces/IData';
+import { InteractionService } from 'src/app/services/interaction.service';
 
 @Component({
   selector: 'app-movie-presentation',
@@ -7,12 +8,18 @@ import { IData } from 'src/app/interfaces/IData';
   styleUrls: ['./movie-presentation.component.css']
 })
 export class MoviePresentationComponent implements OnInit {
+  
   @Input() products: IData[];
 
-  constructor() { }
+  constructor(private _interactionService: InteractionService) {}
 
   ngOnInit() {
-    
+  }
+
+  cartValue = true;
+
+  addToCart(){
+    this._interactionService.sendCartItem(this.cartValue);
   }
 
 }

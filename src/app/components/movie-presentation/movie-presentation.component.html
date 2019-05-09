@@ -1,8 +1,11 @@
-<div class="card m-2" style="width: 18rem; min-height: 50rem;">
-  <img class="card-img-top" style="height: 30rem;" src="{{products.imageUrl}}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{products.name}}</h5>
-    <p class="card-text">Price: {{products.price}}</p>
-    <a (click)="addToCart()" class="btn btn-primary">Add to cart</a>
+<div class="card m-2" style="width: 16rem; background-color: rgb(29, 0, 0);">
+  <a [routerLink]="['/details', products.id]"><img class="card-img-top" style="min-height: 25rem; max-height: 25rem;" src="{{products.imageUrl}}" alt="Card image cap"></a>
+  <div class="card-body row justify-content-around">
+    <div style="border-right: 1px solid white; padding-right: 1rem;">
+      <a (click)="addToCart()" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to cart</a>
+    </div>
+    <div>
+      <p class="card-text mt-1" style="color:whitesmoke;">Price: {{products.price}}</p>
+    </div>
   </div>
 </div>

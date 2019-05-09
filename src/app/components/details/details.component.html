@@ -1,0 +1,20 @@
+<div class="container-fluid row col-12">
+<div class="container-fluid col-12 col-lg-9 row" style="background-size: cover; background-repeat: no-repeat; background-image: url('https://media.giphy.com/media/3o7rc0qU6m5hneMsuc/giphy.gif'); min-height: 94.1vh;">
+  <div class="row m-5" style="max-width: 40rem;">
+    <div class="col-md-6" style="padding: 0; height: 550px;">
+      <img src="{{product.imageUrl}}" style="width: 100%; height: 100%;">
+    </div>
+    <div class="col-md-6 p-4" style="background-color: rgb(29, 0, 0); height: 550px;">
+      <h5>{{product.name}}</h5>
+      <p>Description: {{product.description}}</p>
+      <p>Year: {{product.year}}</p>
+      <p>Added: {{product.added}}</p>
+      <p>Price: {{product.price}}</p>
+      <a (click)="addToCart()" class="btn btn-primary" style="color:whitesmoke; background-color: black; border-color: white; cursor: pointer;"><i class="fas fa-shopping-cart"></i> Add to cart</a>
+    </div>
+  </div>
+</div>
+<div class="col-3 p-0 d-lg-block d-none">
+    <app-shopping-cart></app-shopping-cart>
+</div>
+</div>
