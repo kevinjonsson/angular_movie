@@ -1,32 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+    background-color: #000;
+}
 .container-fluid{
     margin: 0!important;
     padding: 0!important;
     background-color: black;
 }
 
-h5{
-    color: white;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: #000;
+    font-family: 'Raleway', sans-serif;
 }
 p{
     color:white;
+    font-family: 'Lato', sans-serif;
 }
 
 i{
     color: white;
 }
 
-a{
-    opacity: 1;
+.my_btn{
+    color:whitesmoke;
+    background-color: black; 
+    border-color: black; 
+    cursor: pointer;
+    display:inline-block;
+    border-radius:0.2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    text-align:center;
+    position:relative;
+    padding: 5px 10px;
+    box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12)!important;
 }
-
-a:hover{
-    opacity: 0.6;
-}
-
-.btn{
-    color:whitesmoke!important;
-    background-color: black!important; 
-    border-color: white!important; 
-    cursor: pointer!important;
+    
+.my_btn:hover{
+    box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12)!important;
 }

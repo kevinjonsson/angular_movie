@@ -1,0 +1,220 @@
+.main{
+  max-width: 100%;
+  padding: 0!important;
+  margin: 0!important;
+  background-color: transparent!important;
+  background-image: url('../../image/646578.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  flex-wrap: nowrap!important; 
+  overflow: hidden!important; 
+  overflow-x: scroll!important; 
+}
+
+.sidebar {
+  min-width: 300px;
+  max-width: 300px;
+  display: table-cell;
+}
+
+.content {
+  display: table-cell;
+  width: 100%;
+}
+
+.header{
+  height: 80vh; 
+  background-image: url('../../image/646578.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(200, 200, 200, 0.75);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window>div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 2rem;
+  background: #fff;
+  color: #444;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+.categorys{
+  color: white;
+  max-width: 100%;
+  padding: 0 20px!important;
+  margin: 0!important;
+  background-color: transparent!important;
+  background-image: url('../../image/646578.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) { 
+  .main{
+    max-width: 100%;
+    padding: 0!important;
+    margin: 0!important;
+    background-color: transparent!important;
+    background-image: url('../../image/646578.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    flex-wrap: nowrap!important; 
+    overflow: hidden!important; 
+    overflow-x: scroll!important; 
+}
+
+.sidebar {
+    min-width: 300px;
+    max-width: 300px;
+    display: table-cell;
+}
+
+.content {
+    display: table-cell;
+    width: 100%;
+}
+
+.header{
+    height: 80vh; 
+    background-image: url('../../image/646578.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(200, 200, 200, 0.75);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .modal-window:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .modal-window>div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 2rem;
+    background: #fff;
+    color: #444;
+  }
+  
+  .modal-window header {
+    font-weight: bold;
+  }
+  
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+  }
+  
+  .modal-close:hover {
+    color: #000;
+  }
+  
+  .modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+  }
+
+  .hej{
+    color: white;
+    max-width: 100%;
+    padding: 0 20px!important;
+    margin: 0!important;
+    background-color: transparent!important;
+    background-image: url('../../image/646578.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .main{
+    width: calc(100vw - 300px)!important;
+  } 
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

@@ -11,9 +11,7 @@ import { IData } from '../interfaces/IData';
 export class DataService implements IDataService {
   constructor(private http: HttpClient) { }
 
-
-
-  getData(): Observable<IData[]> {
+    getData(): Observable<IData[]> {
     return this.http.get<IData[]>('https://medieinstitutet-wie-products.azurewebsites.net/api/products');
   }
 

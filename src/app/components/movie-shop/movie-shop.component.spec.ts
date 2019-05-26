@@ -5,27 +5,41 @@ import { MoviePresentationComponent } from '../movie-presentation/movie-presenta
 import { HttpClientModule } from '@angular/common/http';
 import { ShoppingCartComponent } from '../shopping-cart/shopping-cart.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { Component, Input } from '@angular/core';
+import { IData } from 'src/app/interfaces/IData';
 
 
-describe('MovieShopComponent', () => {
-  let component: MovieShopComponent;
-  let fixture: ComponentFixture<MovieShopComponent>;
+  describe('MovieShopComponent', () => {
+    let component: MovieShopComponent;
+    let fixture: ComponentFixture<MovieShopComponent>;
+  
+    beforeEach(async(() => {
+      TestBed.configureTestingModule({
+        declarations: [ MoviePresentationComponent, MovieShopComponent, MovieShopComponent, ShoppingCartComponent ],
+        imports: [RouterTestingModule, HttpClientModule]
+      })
+      .compileComponents();
+    }));
+  
+    beforeEach(() => {
+      fixture = TestBed.createComponent(MovieShopComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+    });
+  
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [HttpClientModule, RouterTestingModule],
-      declarations: [ MovieShopComponent, MoviePresentationComponent, ShoppingCartComponent]
+    @Component({
+      selector: 'host-component',
+      template: '<app-movie-presentation products="input"></app-movie-presentation>'
     })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(MovieShopComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    class MovieShopComponent {
+      input: IData[];
+  
+      setInput(newInput: IData[]) {
+        this.input = newInput;
+      }
+    }
 });

@@ -1,0 +1,20 @@
+.main_wrap { 
+    display: table;
+}
+
+.main{
+    max-width: 100%;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.sidebar {
+    min-width: 300px;
+    max-width: 300px;
+    display: table-cell;
+}
+
+.content {
+    display: table-cell;
+    width: 100%;
+}

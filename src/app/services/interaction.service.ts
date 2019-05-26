@@ -1,24 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Subject }    from 'rxjs';
+import { Subject, empty }    from 'rxjs';
+import { IData } from '../interfaces/IData';
+import { ICartProduct } from '../interfaces/ICartProducts';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InteractionService {
 
-  private cartItemSource = new Subject<boolean>();
-  cartItem$ = this.cartItemSource.asObservable();
+  private cartItemsSource = new Subject<ICartProduct[]>();
+  cartItems$ = this.cartItemsSource.asObservable();
 
   private cartMovie = new Subject<any>();
   cartMovie$ = this.cartMovie.asObservable();
 
   constructor() { }
 
-  sendCartItem(item: boolean){
-    this.cartItemSource.next(item);
+  sendCartItem(items: ICartProduct[]){
+    this.cartItemsSource.next(items);
   }
 
-  sendCartProduct(movie){
-    this.cartMovie.next(movie);
+  sendCartProduct(movie: IData){
+      this.cartMovie.next(movie);
   }
 }

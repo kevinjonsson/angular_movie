@@ -1,3 +1,52 @@
 .cart{
+    /* background-color: #34495e; */
+    /* background-image: linear-gradient(to right,#2c3e50), #34495e; */
+    background-color: black;
+    padding: 0 10px;
+    min-height: 94.1vh!important;
+}
+
+.order{
+    overflow: scroll;
+}
+
+h2{
+    font-weight: bold;
+    text-align: center;
+    color: violet;
+    padding-top: 40px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h3{
+    padding-top: 1.5em;
+    color: rgb(245, 245, 245);
+    font-family: 'Lato', sans-serif;
+}
+
+h5{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgb(245, 245, 245);
+}
+
+p{
+    color: rgb(245, 245, 245);
+    font-size: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+hr{
     background-color: white;
 }
+
+.my_btn{
+    width: 280px;
+    padding: 10px 10px 10px 0;
+    margin: 10px 0;
+}
+
+/* rgba(30, 28, 49) */

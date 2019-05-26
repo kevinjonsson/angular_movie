@@ -10,15 +10,18 @@ export class HeaderComponent implements OnInit {
 
   constructor(private _interactionService: InteractionService) { }
 
-  cartItem = 0;
+  cartItem: number;
+
   ngOnInit() {
-    this._interactionService.cartItem$.subscribe(
-      item => {
-        if(item === true){
-          this.cartItem++;
-        }else{
-          this.cartItem--;
+    this.cartItem = JSON.parse(localStorage.getItem("cartItem"));
+    
+    this._interactionService.cartItems$.subscribe(
+      item => {   
+        this.cartItem = 0;
+        for (let i = 0; i < item.length; i++){
+          this.cartItem += item[i].amount;
         }
+        localStorage.setItem('cartItem', JSON.stringify(this.cartItem));
       }
     )
   }

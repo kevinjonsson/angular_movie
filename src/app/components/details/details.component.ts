@@ -13,7 +13,6 @@ import { MockDataService } from 'src/app/services/mock-data.service';
 export class DetailsComponent implements OnInit {
 
   product: IData;
-  cartValue = true;
 
   constructor(private route: ActivatedRoute, private service: DataService, private _interactionService: InteractionService) { }
 
@@ -21,6 +20,7 @@ export class DetailsComponent implements OnInit {
     this.route.params.subscribe(myParams => {
       const myId = myParams['id'];
       this.service.getProductData(myId).subscribe((data) => { this.product = data; });
+      console.log(this.product.imageUrl);
     });
   }
 

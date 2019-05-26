@@ -16,10 +16,7 @@ export class MoviePresentationComponent implements OnInit {
   ngOnInit() {
   }
 
-  cartValue = true;
-
   addToCart(movie){
-    this._interactionService.sendCartItem(this.cartValue);
     this._interactionService.sendCartProduct(movie);
   }
 
