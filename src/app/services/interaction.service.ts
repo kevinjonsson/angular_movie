@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject, empty }    from 'rxjs';
 import { IData } from '../interfaces/IData';
 import { ICartProduct } from '../interfaces/ICartProducts';
+import { IOrder } from '../interfaces/IOrder';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,6 @@ export class InteractionService {
   }
 
   sendCartProduct(movie: IData){
-      this.cartMovie.next(movie);
+    this.cartMovie.next(movie);
   }
 }

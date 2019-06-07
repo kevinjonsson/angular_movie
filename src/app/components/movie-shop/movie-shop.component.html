@@ -7,28 +7,23 @@
         <a href="#modal-close"><button class="my_btn" style="background-color: darkgreen; border-color: black; margin-top: 20px;">Continue shopping</button></a>
       </div>
     </div> -->
-  <div class="header"></div>
-  <div class="content">
+  <div class="main_wrap">
     <div class="header"></div>
-    <h3 class="categorys">All movies</h3>
-    <div class="main row">
-      <app-movie-presentation *ngFor="let product of products" [products]="product"></app-movie-presentation>
-    </div>
     <h3 class="categorys">Action</h3>
     <div class="main row">
-      <app-movie-presentation *ngFor="let product of products" [products]="product"></app-movie-presentation>
-    </div>
-    <h3 class="categorys">Thriller</h3>
-    <div class="main row">
-      <app-movie-presentation *ngFor="let product of products" [products]="product"></app-movie-presentation>
+      <app-movie-presentation *ngFor="let product of actionMovie" [products]="product"></app-movie-presentation>
     </div>
     <h3 class="categorys">Comedy</h3>
     <div class="main row">
-      <app-movie-presentation *ngFor="let product of products" [products]="product"></app-movie-presentation>
+      <app-movie-presentation *ngFor="let product of comedyMovie" [products]="product"></app-movie-presentation>
+    </div>
+    <h3 class="categorys">Thriller</h3>
+    <div class="main row">
+      <app-movie-presentation *ngFor="let product of thrillerMovie" [products]="product"></app-movie-presentation>
     </div>
     <h3 class="categorys">Sci-fi</h3>
     <div class="main row">
-      <app-movie-presentation *ngFor="let product of products" [products]="product"></app-movie-presentation>
+      <app-movie-presentation *ngFor="let product of sfiMovie" [products]="product"></app-movie-presentation>
     </div>
   </div>
   <div class="sidebar d-none d-md-block">

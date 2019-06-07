@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InteractionService } from 'src/app/services/interaction.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +9,11 @@ import { InteractionService } from 'src/app/services/interaction.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private _interactionService: InteractionService) { }
+  constructor(private _interactionService: InteractionService, private service: DataService) { }
 
   cartItem: number;
+
+  searchValue;
 
   ngOnInit() {
     this.cartItem = JSON.parse(localStorage.getItem("cartItem"));
@@ -22,7 +25,21 @@ export class HeaderComponent implements OnInit {
           this.cartItem += item[i].amount;
         }
         localStorage.setItem('cartItem', JSON.stringify(this.cartItem));
+        console.log(this.searchValue);
       }
     )
+    this.closeWindow();
+  }
+
+  searchMovie(searchValue){
+    this.service.getSearch(searchValue).subscribe((data) => { this.searchValue = data; });
+    
+    var x = document.getElementById("searchDropdown");
+    x.style.display = "block";
+  }
+
+  closeWindow(){
+    var x = document.getElementById("searchDropdown");
+    x.style.display = "none";
   }
 }

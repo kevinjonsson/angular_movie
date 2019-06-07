@@ -17,4 +17,14 @@
 .content {
     display: table-cell;
     width: 100%;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-image: url('../../image/646578.jpg'); 
+    min-height: 94.1vh;
+}
+
+.info{
+    background-color: rgba(0, 0, 0, 0.849); 
+    height: 550px;
+    border-radius: 30px;
 }

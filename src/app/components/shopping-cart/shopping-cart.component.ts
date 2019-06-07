@@ -41,7 +41,7 @@ export class ShoppingCartComponent implements OnInit {
     }
 
     if(addedMovie === false){
-      this.cartMovies.push({ movie: movie, amount: 1});
+      this.cartMovies.push({ movie: movie, amount: 1 });
     }
     
     localStorage.setItem('cartMovies', JSON.stringify(this.cartMovies));
