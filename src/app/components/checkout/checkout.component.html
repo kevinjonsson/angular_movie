@@ -1,0 +1,21 @@
+<div class="main container-fluid d-flex justify-content-center">
+  <div class="form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address:</label>
+            <input #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Name:</label>
+            <input #name type="text" class="form-control" id="exampleInputName" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <select #payment>
+              <option value="Card">Card</option>
+              <option value="Swish">Swish</option>
+              <option value="Bitcoin">Bitcoin</option>
+            </select>
+          </div>
+          <a (click)="addOrder(name.value, email.value, payment.value)"><button class="my_btn">Confirm</button></a>
+  </div>
+</div>
