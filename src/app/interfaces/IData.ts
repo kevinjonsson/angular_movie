@@ -1,3 +1,5 @@
+import { IProductCategory } from './IProductCategory';
+
 export interface IData {
   id: number;
   name: string;
@@ -6,4 +8,5 @@ export interface IData {
   imageUrl: string;
   year: number;
   added: string;
+  productCategory: IProductCategory[];
 }

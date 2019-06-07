@@ -12,7 +12,7 @@ import { MockDataService } from 'src/app/services/mock-data.service';
 })
 export class DetailsComponent implements OnInit {
 
-  product: IData;
+  product: IData = {id: 77, name: "Interstellar", description: 'hej', price: 50, imageUrl: 'image', year: 2003, added: '2018', productCategory:[{categoryId:8,category:null}]};
 
   constructor(private route: ActivatedRoute, private service: DataService, private _interactionService: InteractionService) { }
 
@@ -20,7 +20,6 @@ export class DetailsComponent implements OnInit {
     this.route.params.subscribe(myParams => {
       const myId = myParams['id'];
       this.service.getProductData(myId).subscribe((data) => { this.product = data; });
-      console.log(this.product.imageUrl);
     });
   }
 

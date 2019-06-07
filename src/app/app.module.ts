@@ -9,6 +9,7 @@ import { MovieShopComponent } from './components/movie-shop/movie-shop.component
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './components/details/details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DetailsComponent } from './components/details/details.component';
     MoviePresentationComponent,
     MovieShopComponent,
     ShoppingCartComponent,
-    DetailsComponent
+    DetailsComponent,
+    CheckoutComponent
   ],
   imports: [
     AppRoutingModule,

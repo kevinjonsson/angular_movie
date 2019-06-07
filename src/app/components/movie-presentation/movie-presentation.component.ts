@@ -14,6 +14,7 @@ export class MoviePresentationComponent implements OnInit {
   constructor(private _interactionService: InteractionService) {}
 
   ngOnInit() {
+
   }
 
   addToCart(movie){
