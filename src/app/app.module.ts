@@ -10,6 +10,8 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './components/details/details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,16 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     MovieShopComponent,
     ShoppingCartComponent,
     DetailsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    AdminComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

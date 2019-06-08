@@ -4,11 +4,13 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { MovieShopComponent } from './components/movie-shop/movie-shop.component';
 import { DetailsComponent } from './components/details/details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component'
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
 { path: 'shopping-cart', component: ShoppingCartComponent },
 { path: 'details/:id', component: DetailsComponent },
 { path: 'checkout', component: CheckoutComponent },
+{ path: 'admin', component: AdminComponent },
 { path: '', component: MovieShopComponent }
 ];
 

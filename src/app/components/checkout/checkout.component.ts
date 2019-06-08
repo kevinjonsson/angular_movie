@@ -3,6 +3,7 @@ import { IOrder } from 'src/app/interfaces/IOrder';
 import { DataService } from 'src/app/services/data.service';
 import * as  moment from  'moment';
 import { IOrderRow } from 'src/app/interfaces/IOrderRows';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
@@ -11,13 +12,18 @@ import { IOrderRow } from 'src/app/interfaces/IOrderRows';
 })
 export class CheckoutComponent implements OnInit {
 
+  constructor(private service: DataService, private fb: FormBuilder) { }
+
   order: IOrder = {companyId:0,created:"0001-01-01T00:00:00",createdBy:"null",paymentMethod:"null",totalPrice:0,status:0,orderRows:[]};
 
   orderRows: IOrderRow[] = [];
 
-
-
-  constructor(private service: DataService) { }
+  profileForm = this.fb.group({
+    name: ['', Validators.required],
+    email: ['', Validators.required],
+    payment: ['', Validators.required]
+  
+  });
 
   ngOnInit() { 
   }
@@ -36,7 +42,7 @@ export class CheckoutComponent implements OnInit {
 
     let companyId = 21;
     let created = moment().format();
-    let createdBy = name+": "+email;
+    let createdBy = " Name: " + name+", Email: "+email;
     let paymentMethod = payment;
     let totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
     let status = 0;

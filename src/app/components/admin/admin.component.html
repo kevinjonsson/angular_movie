@@ -1,0 +1,16 @@
+<div class="main_wrap container-fluid d-flex justify-content-center">
+    <div class="content">
+      <div class="content_info" *ngFor="let item of allOrders">
+        <h3>Order</h3>
+          <p>Id: {{item.id}}</p>
+          <p>Company id: {{item.companyId}}</p>
+          <p>Created by: {{item.createdBy}}</p>
+          <p>Payment: {{item.paymentMethod}}</p>
+          <p>Total price: {{item.totalPrice}}kr</p>
+          <h3>Products</h3>
+           <p *ngFor="let test of item.orderRows">
+             Product id: {{test.productId}}, amount: {{test.amount}}
+            </p>
+      </div>
+    </div>
+  </div>

@@ -1,20 +1,32 @@
 .cart_container{
-    width: 300px;
+    min-height: 100vh!important;
+    width:100%; 
+    background-color: black; 
+    height: 100%;
+}
+
+.cart{
+    height: 100%;
+    background-color: black;
+    padding: 0 10px;
     background-image: url('../../image/646578.jpg');
     background-size: cover; 
     background-repeat: no-repeat;
 }
-.cart{
-    /* background-color: #34495e; */
-    /* background-image: linear-gradient(to right,#2c3e50), #34495e; */
-    background-color: black;
-    padding: 0 10px;
-    min-height: 94.1vh!important;
+
+.cartInfo{
     max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.699);
+    border-radius: 30px;
+    position: sticky; 
+    top: 4rem;
 }
 
 .order{
     overflow: scroll;
+    overflow-y: scroll; 
+    height:280px;
 }
 
 h2{

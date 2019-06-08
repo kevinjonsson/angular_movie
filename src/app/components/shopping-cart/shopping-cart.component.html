@@ -1,9 +1,9 @@
-<div class="cart_container" style="width:100%; background-color: black; height: 100%;">
-    <div class="cart" style="height: 100%;">
-        <div style="position: sticky; top: 4rem;">
+<div class="cart_container">
+    <div class="cart">
+        <div class="cartInfo">
           <h2>Shopping Cart</h2>
           <hr>
-          <div class="order" style="overflow-y: scroll; height:280px;">
+          <div class="order">
               <div *ngFor="let cartMovie of cartMovies">
                 <p><a style="color: rgb(58, 92, 141); cursor: pointer; padding: 10px;" (click)="remove(cartMovie)"><i class="fas fa-minus" style="color: rgb(58, 92, 141);"></i></a> {{cartMovie.amount}} <a style="color: rgb(58, 92, 141); cursor: pointer; padding: 10px;" (click)="addToCart(cartMovie.movie)"><i class="fas fa-plus" style="color: rgb(58, 92, 141);"></i></a> {{cartMovie.movie.name}} <br>
                 Price: {{cartMovie.amount * cartMovie.movie.price}} kr</p>

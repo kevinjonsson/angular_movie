@@ -1,21 +1,31 @@
 <div class="main container-fluid d-flex justify-content-center">
   <div class="form">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address:</label>
-            <input #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <form [formGroup]="profileForm">
+        <div class="form-group">
+            <label for="name">
+                Name:
+                <input type="text" formControlName="name" required #name id="name">
+              </label>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Name:</label>
-            <input #name type="text" class="form-control" id="exampleInputName" placeholder="Name">
-          </div>
-          <div class="form-group">
-            <select #payment>
-              <option value="Card">Card</option>
-              <option value="Swish">Swish</option>
-              <option value="Bitcoin">Bitcoin</option>
-            </select>
-          </div>
-          <a (click)="addOrder(name.value, email.value, payment.value)"><button class="my_btn">Confirm</button></a>
+              <label for="email">
+                  Email:
+                  <input type="text" formControlName="email" required #email id="email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="email">
+                    Payment:
+                    <select type="text" formControlName="payment" required #payment id="payment">
+                        <option value="Card">Card</option>
+                        <option value="Swish">Swish</option>
+                        <option value="Bitcoin">Bitcoin</option>
+                      </select>
+                  </label>
+              </div>
+        <button (click)="addOrder(name.value, email.value, payment.value)" type="submit"
+        [disabled]="!profileForm.valid">Confirm</button>
+    </form>
   </div>
 </div>
