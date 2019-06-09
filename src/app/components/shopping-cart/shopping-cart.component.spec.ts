@@ -49,7 +49,7 @@ describe('ShoppingCartComponent', () => {
     });
   });
 
-  it('should add two amount of the same movie', () => {
+  it('should add amount of the same movie', () => {
 
     const service = new MockDataService();
     service.getData().subscribe((products) =>{

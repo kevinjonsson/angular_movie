@@ -8,6 +8,7 @@ import { ShoppingCartComponent } from '../shopping-cart/shopping-cart.component'
 import { RouterTestingModule } from '@angular/router/testing';
 import { DataService } from 'src/app/services/data.service';
 import { MockDataService } from 'src/app/services/mock-data.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
   describe('CheckoutComponent', () => {
@@ -17,7 +18,7 @@ import { MockDataService } from 'src/app/services/mock-data.service';
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ CheckoutComponent, ShoppingCartComponent, MovieShopComponent, MoviePresentationComponent ],
-      imports: [RouterTestingModule, HttpClientModule],
+      imports: [RouterTestingModule, HttpClientModule, ReactiveFormsModule],
       providers: [{provide: DataService, useClass: MockDataService}]
     })
     .compileComponents();

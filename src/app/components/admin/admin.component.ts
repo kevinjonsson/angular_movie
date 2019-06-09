@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { IOrder } from 'src/app/interfaces/IOrder';
 
 @Component({
   selector: 'app-admin',
@@ -8,7 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class AdminComponent implements OnInit {
 
-  allOrders;
+  allOrders: IOrder[];
 
   constructor(service: DataService) 
   { service.getOrders().subscribe((data) => { this.allOrders = data; }); }

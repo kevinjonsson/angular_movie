@@ -18,7 +18,7 @@ export class MovieShopComponent implements OnInit {
   actionMovie: IData[] = [];
   thrillerMovie: IData[] = [];
   comedyMovie: IData[] = [];
-  sfiMovie: IData[] = [];
+  sciFiMovie: IData[] = [];
 
 
   addedItem = {movie: {id: 77, name: "Interstellar", description: 'hej', price: 50, year: 2003, added: '2018', productCategory:[{ categoryId:8, category:null}]}, amount: 2};
@@ -53,7 +53,7 @@ export class MovieShopComponent implements OnInit {
           this.comedyMovie.push(this.products[a]);
         }
         if( movieCategory[b].categoryId === this.categorys[3].id){
-          this.sfiMovie.push(this.products[a]);
+          this.sciFiMovie.push(this.products[a]);
         }
       }
     }

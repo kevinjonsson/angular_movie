@@ -1,26 +1,20 @@
 .cart_container{
-    min-height: 100vh!important;
-    width:100%; 
-    background-color: black; 
+    width:100%;  
     height: 100%;
 }
 
 .cart{
     height: 100%;
-    background-color: black;
-    padding: 0 10px;
-    background-image: url('../../image/646578.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat;
 }
 
 .cartInfo{
-    max-width: 500px;
+    padding: 0 10px;
+    max-width: 600px;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.699);
     border-radius: 30px;
     position: sticky; 
-    top: 4rem;
+    top: 5rem;
 }
 
 .order{

@@ -35,4 +35,16 @@ import { MockDataService } from 'src/app/services/mock-data.service';
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create a list of 2 movies', () => {
+    fixture = TestBed.createComponent(MovieShopComponent);
+    component = fixture.componentInstance;
+    expect(component.products.length).toBe(2);
+  });
+
+  it('should create 4 categories', () => {
+    fixture = TestBed.createComponent(MovieShopComponent);
+    component = fixture.componentInstance;
+    expect(component.categorys.length).toBe(4);
+  });
 });

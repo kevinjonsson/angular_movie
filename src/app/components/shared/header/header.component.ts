@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InteractionService } from 'src/app/services/interaction.service';
 import { DataService } from 'src/app/services/data.service';
+import { IData } from 'src/app/interfaces/IData';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
   cartItem: number;
 
-  searchValue;
+  searchValue: IData[] = [];
 
   ngOnInit() {
     this.cartItem = JSON.parse(localStorage.getItem("cartItem"));
@@ -32,10 +33,14 @@ export class HeaderComponent implements OnInit {
   }
 
   searchMovie(searchValue){
-    this.service.getSearch(searchValue).subscribe((data) => { this.searchValue = data; });
+    if(searchValue.length < 2){
+      searchValue = "bla";
+    }else{
+      this.service.getSearch(searchValue).subscribe((data) => { this.searchValue = data; });
     
-    var x = document.getElementById("searchDropdown");
-    x.style.display = "block";
+      var x = document.getElementById("searchDropdown");
+      x.style.display = "block";
+    }
   }
 
   closeWindow(){

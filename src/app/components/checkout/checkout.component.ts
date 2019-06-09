@@ -30,12 +30,12 @@ export class CheckoutComponent implements OnInit {
 
   addOrder(name, email, payment){
     
-    let stringFromLocalStorage = JSON.parse(localStorage.getItem("cartMovies"));
+    let cartMovies = JSON.parse(localStorage.getItem("cartMovies"));
 
-    for(let i = 0; i < stringFromLocalStorage.length; i++){
+    for(let i = 0; i < cartMovies.length; i++){
 
-      let productId = stringFromLocalStorage[i].movie.id;
-      let amount = stringFromLocalStorage[i].amount;
+      let productId = cartMovies[i].movie.id;
+      let amount = cartMovies[i].amount;
 
       this.orderRows.push({ productId:productId, amount:amount})
     }
