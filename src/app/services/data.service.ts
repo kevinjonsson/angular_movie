@@ -37,4 +37,8 @@ export class DataService implements IDataService {
     return this.http.get('https://medieinstitutet-wie-products.azurewebsites.net/api/search?='+search);
   }
 
+  deleteOrder(id:number): Observable<any>{
+    return this.http.delete<IOrder>('https://medieinstitutet-wie-products.azurewebsites.net/api/orders' + '/' + id);
+  }
+
 }

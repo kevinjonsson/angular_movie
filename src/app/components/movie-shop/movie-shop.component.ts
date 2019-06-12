@@ -22,6 +22,8 @@ export class MovieShopComponent implements OnInit {
 
 
   addedItem = {movie: {id: 77, name: "Interstellar", description: 'hej', price: 50, year: 2003, added: '2018', productCategory:[{ categoryId:8, category:null}]}, amount: 2};
+  title = 'modal-app';
+  showModal = false;
 
   constructor(service: DataService, private _interactionService: InteractionService) {
     service.getCategorys().subscribe((dataCategory) => { 
@@ -35,8 +37,13 @@ export class MovieShopComponent implements OnInit {
     this._interactionService.cartMovie$.subscribe(
       movie => {
           this.addedItem = movie;
+          this.toggleModal();
       }
     )
+  }
+  
+  toggleModal = () => {
+    this.showModal = !this.showModal;
   }
 
   sortCategorys(){

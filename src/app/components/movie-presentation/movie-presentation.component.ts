@@ -17,7 +17,10 @@ export class MoviePresentationComponent implements OnInit {
 
   }
 
+  showModal = false;
+
   addToCart(movie){
+    this.showModal = !this.showModal;
     this._interactionService.sendCartProduct(movie);
   }
 

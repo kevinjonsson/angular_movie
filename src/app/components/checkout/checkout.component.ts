@@ -3,7 +3,7 @@ import { IOrder } from 'src/app/interfaces/IOrder';
 import { DataService } from 'src/app/services/data.service';
 import * as  moment from  'moment';
 import { IOrderRow } from 'src/app/interfaces/IOrderRows';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
@@ -12,11 +12,19 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor(private service: DataService, private fb: FormBuilder) { }
+  group = new FormGroup({
+    name : new FormControl(''),
+    email : new FormControl(''),
+    payment : new FormControl(''),
+  });
+
+  constructor(private service: DataService, private fb: FormBuilder) { 
+  }
 
   order: IOrder = {companyId:0,created:"0001-01-01T00:00:00",createdBy:"null",paymentMethod:"null",totalPrice:0,status:0,orderRows:[]};
 
   orderRows: IOrderRow[] = [];
+
 
   profileForm = this.fb.group({
     name: ['', Validators.required],

@@ -10,4 +10,5 @@ export interface IDataService {
   postOrders(newOrder): Observable<IOrder>;
   getCategorys(): Observable<ICategorys[]>;
   getSearch(search): Observable<any>;
+  deleteOrder(id:number): Observable<any>;
 }

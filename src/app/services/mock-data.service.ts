@@ -54,4 +54,7 @@ export class MockDataService implements IDataService {
   getSearch(): Observable<any>{
     return of(this.product);
   }
+  deleteOrder(id:number): Observable<any>{
+    return of(this.product);
+  }
 }
