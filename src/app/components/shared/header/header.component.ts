@@ -26,7 +26,6 @@ export class HeaderComponent implements OnInit {
           this.cartItem += item[i].amount;
         }
         localStorage.setItem('cartItem', JSON.stringify(this.cartItem));
-        console.log(this.searchValue);
       }
     )
     this.closeWindow();

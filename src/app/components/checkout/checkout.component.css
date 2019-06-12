@@ -1,21 +1,22 @@
 .main{
-    color: black;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-image: url('../../image/646578.jpg'); 
+    min-height: 92.5vh;
+}
+
+.form_container{
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
 }
 
 .form{
-    margin-top: 100px;
-    width: 100%;
     max-width: 700px;
-    padding: 2rem;
-    background-color: rgb(255, 255, 255);
+    padding: 8rem;
+    background-color: rgba(0, 0, 0, 0.699);
     border-radius: 20px;
-}
-
-input{
-    border: none;
-    border-bottom: 1px solid black;
-}
-
-.my_btn{
-    background-color: green;
+    color: white;
+    margin: 0 auto;
 }

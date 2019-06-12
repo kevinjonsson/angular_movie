@@ -11,6 +11,10 @@
     width: 100%;
 }
 
+h3{
+    text-align: end;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 } 

@@ -1,0 +1,17 @@
+.modal_content{
+    background-color: rgba(255, 255, 255, 0.918);
+    text-align: center;
+    width: 350px;
+    margin: 200px auto;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.closeBtn{
+    text-align: end;
+    cursor: pointer;
+}
+
+i{
+    color: black;
+}

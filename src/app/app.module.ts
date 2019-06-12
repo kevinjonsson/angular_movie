@@ -12,6 +12,8 @@ import { DetailsComponent } from './components/details/details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShoppingCartFullsizeComponent } from './components/shopping-cart-fullsize/shopping-cart-fullsize.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ShoppingCartComponent,
     DetailsComponent,
     CheckoutComponent,
-    AdminComponent
+    AdminComponent,
+    ShoppingCartFullsizeComponent,
+    ModalComponent
   ],
   imports: [
     AppRoutingModule,
