@@ -2,7 +2,7 @@
     display: table;
     background-size: cover; 
     background-repeat: no-repeat; 
-    background-image: url('../../image/646578.jpg'); 
+    background-image: url('../../../assets/images/646578.jpg');
     min-height: 92.5vh;
 }
 
@@ -16,7 +16,7 @@
     margin: 0 auto;
     max-width: 600px;
     background-color: rgba(0, 0, 0, 0.699);
-    border-radius: 30px;
+    border-radius: 5px;
 }
 
 .order{

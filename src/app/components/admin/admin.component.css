@@ -1,24 +1,64 @@
 .main_wrap{
     min-height: 92.5vh;
-}
-.content_info{
-    background-color: rgba(0, 0, 0, 0.699);
-    border-radius: 30px;
-    margin: 50px;
-    padding: 15px;
     background-size: cover; 
     background-repeat: no-repeat; 
-    background-image: url('../../image/646578.jpg');
+    background-image: url('../../../assets/images/646578.jpg'); 
+}
+
+.content{
+    background-color: white;
+    width: 1200px;
+    margin: 20px 0;
+}
+.content_info{
+    background-color: rgb(245, 245, 245);
+    margin: 20px;
+    padding: 15px;
+}
+
+button{
+    margin: 15px;
 }
 
 h3{
+    color: black;
     padding: 15px;
     text-decoration: underline;
-    color: white;
 }
 
 p{
-    color: white;
+    color: black;
     font-size: 1.2rem;
     padding-left: 15px;
 }
+
+.products{
+    overflow: scroll;
+    overflow-y: scroll; 
+    height:265px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) { 
+    
+  } 
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  } 
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .content_info{
+        display: flex;
+        justify-content: space-between;
+    }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {}

@@ -7,6 +7,7 @@ import { MovieShopComponent } from './components/movie-shop/movie-shop.component
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './components/details/details.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -21,7 +22,8 @@ describe('AppComponent', () => {
         MoviePresentationComponent,
         MovieShopComponent,
         ShoppingCartComponent,
-        DetailsComponent
+        DetailsComponent,
+        ModalComponent
       ],
     }).compileComponents();
   }));

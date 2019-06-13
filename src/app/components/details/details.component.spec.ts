@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataService } from 'src/app/services/data.service';
 import { MockDataService } from 'src/app/services/mock-data.service';
 import { ShoppingCartComponent } from '../shopping-cart/shopping-cart.component';
+import { ModalComponent } from '../modal/modal.component';
 
 describe('DetailsComponent', () => {
   let component: DetailsComponent;
@@ -16,7 +17,7 @@ describe('DetailsComponent', () => {
   beforeEach(async(() => {
     activatedRoute.setParamMap({id: 1});
     TestBed.configureTestingModule({
-      declarations: [ DetailsComponent, ShoppingCartComponent ],
+      declarations: [ DetailsComponent, ShoppingCartComponent, ModalComponent ],
       imports: [RouterTestingModule, HttpClientModule],
       providers: [{provide: activatedRoute, useValue: activatedRoute},
       {provide: DataService, useClass: MockDataService}]
@@ -34,4 +35,4 @@ describe('DetailsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+}); 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, empty }    from 'rxjs';
+import { Subject } from 'rxjs';
 import { IData } from '../interfaces/IData';
 import { ICartProduct } from '../interfaces/ICartProducts';
 import { IOrder } from '../interfaces/IOrder';
@@ -18,6 +18,7 @@ export class InteractionService {
   constructor() { }
 
   sendCartItem(items: ICartProduct[]){
+    console.log(items)
     this.cartItemsSource.next(items);
   }
 

@@ -7,17 +7,16 @@ import { ShoppingCartComponent } from '../shopping-cart/shopping-cart.component'
 import { RouterTestingModule } from '@angular/router/testing';
 import { DataService } from 'src/app/services/data.service';
 import { MockDataService } from 'src/app/services/mock-data.service';
+import { ModalComponent } from '../modal/modal.component';
 
 
   describe('MovieShopComponent', () => {
     let component: MovieShopComponent;
-  let fixture: ComponentFixture<MovieShopComponent>;
-  //let activatedRoute = new ActivatedRouteStub({id: 1})
+    let fixture: ComponentFixture<MovieShopComponent>;
 
   beforeEach(async(() => {
-    //activatedRoute.setParamMap({id: 1});
     TestBed.configureTestingModule({
-      declarations: [ MovieShopComponent, ShoppingCartComponent, MoviePresentationComponent ],
+      declarations: [ MovieShopComponent, ShoppingCartComponent, MoviePresentationComponent, ModalComponent ],
       imports: [RouterTestingModule, HttpClientModule],
       providers: [
       {provide: DataService, useClass: MockDataService}]

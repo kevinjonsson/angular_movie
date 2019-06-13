@@ -1,7 +1,7 @@
 .main{
     background-size: cover; 
     background-repeat: no-repeat; 
-    background-image: url('../../image/646578.jpg'); 
+    background-image: url('../../../assets/images/646578.jpg'); 
     min-height: 92.5vh;
 }
 
@@ -16,7 +16,19 @@
     max-width: 700px;
     padding: 8rem;
     background-color: rgba(0, 0, 0, 0.699);
-    border-radius: 20px;
+    border-radius: 5px;
     color: white;
     margin: 0 auto;
+}
+
+select{
+    background-color: black;
+    color: white;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-bottom: 1px solid white;
 }

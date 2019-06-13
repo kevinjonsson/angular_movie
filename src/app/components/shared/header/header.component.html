@@ -21,14 +21,15 @@
     </div>
   </nav>
   <div class="d-flex justify-content-end" style="color:black!important">
-    <div id="searchDropdown"
-      style="background-color: white; max-height: 240px; overflow: hidden; overflow: scroll; overflow-y: scroll; ">
-      <h3 style="color:black; padding: 10px 10px 0 10px;" (click)="closeWindow()"><i class="fas fa-times"
+    <div id="searchDropdown" style="background-color: rgb(226, 226, 226); max-height: 240px; overflow: scroll; overflow-y: scroll; ">
+      <h3 style="color:black; padding: 15px 15px 0 15px;" (click)="closeWindow()"><i class="fas fa-times"
           style="color:black; cursor: pointer;"></i></h3>
-      <h6 style="color:black; padding: 0 10px;" *ngFor="let item of searchValue"><a (click)="closeWindow()"
-          style="color:black;" [routerLink]="['/details', item.id]">
-          <hr>{{item.name}} </a> </h6>
       <hr>
+      <div style="color:black; padding: 0 10px;" *ngFor="let item of searchValue"><a (click)="closeWindow()" [routerLink]="['/details', item.id]">
+          <img style="width: 50px;" src="{{item.imageUrl}}" alt="img">
+          <p style="color:black; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{item.name}}</p>
+          <hr>
+        </a></div>
     </div>
   </div>
 </header>

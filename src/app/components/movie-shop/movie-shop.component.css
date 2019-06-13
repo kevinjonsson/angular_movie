@@ -3,7 +3,7 @@
   padding: 0!important;
   margin: 0!important;
   background-color: transparent!important;
-  background-image: url('../../image/646578.jpg');
+  background-image: url('../../../assets/images/646578.jpg'); 
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -26,7 +26,7 @@
 
 .header{
   height: 80vh; 
-  background-image: url('../../image/646578.jpg');
+  background-image: url('../../../assets/images/646578.jpg'); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,7 +39,7 @@
   padding: 0 20px!important;
   margin: 0!important;
   background-color: transparent!important;
-  background-image: url('../../image/646578.jpg');
+  background-image: url('../../../assets/images/646578.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -52,7 +52,7 @@
     padding: 0!important;
     margin: 0!important;
     background-color: transparent!important;
-    background-image: url('../../image/646578.jpg');
+    background-image: url('../../../assets/images/646578.jpg'); 
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -75,7 +75,7 @@
 
 .header{
     height: 80vh; 
-    background-image: url('../../image/646578.jpg');
+    background-image: url('../../../assets/images/646578.jpg'); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,7 +88,7 @@
     padding: 0 20px!important;
     margin: 0!important;
     background-color: transparent!important;
-    background-image: url('../../image/646578.jpg');
+    background-image: url('../../../assets/images/646578.jpg'); 
     background-position: center;
     background-size: cover;
     background-attachment: fixed;

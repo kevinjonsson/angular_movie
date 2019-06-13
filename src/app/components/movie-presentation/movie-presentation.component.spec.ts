@@ -5,6 +5,7 @@ import { MovieShopComponent } from '../movie-shop/movie-shop.component';
 import { IData } from 'src/app/interfaces/IData';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ShoppingCartComponent } from '../shopping-cart/shopping-cart.component';
+import { ModalComponent } from '../modal/modal.component';
 
 describe('MoviePresentationComponent', () => {
   let testHostComponent: TestHostComponent;
@@ -12,7 +13,7 @@ describe('MoviePresentationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MoviePresentationComponent, TestHostComponent, MovieShopComponent, ShoppingCartComponent ],
+      declarations: [ MoviePresentationComponent, TestHostComponent, MovieShopComponent, ShoppingCartComponent, ModalComponent ],
       imports: [RouterTestingModule]
     })
     .compileComponents();

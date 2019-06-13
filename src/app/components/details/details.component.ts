@@ -17,6 +17,7 @@ export class DetailsComponent implements OnInit {
   addedItem = {movie: {id: 77, name: "Interstellar", description: 'hej', price: 50, year: 2003, added: '2018', productCategory:[{ categoryId:8, category:null}]}, amount: 2};
 
   showModal = false;
+  
   constructor(private route: ActivatedRoute, private service: DataService, private _interactionService: InteractionService) { }
 
   ngOnInit() {
