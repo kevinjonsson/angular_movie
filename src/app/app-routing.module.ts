@@ -6,6 +6,7 @@ import { DetailsComponent } from './components/details/details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component'
 import { AdminComponent } from './components/admin/admin.component';
 import { ShoppingCartFullsizeComponent } from './components/shopping-cart-fullsize/shopping-cart-fullsize.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
 { path: 'shopping-cart', component: ShoppingCartComponent },
@@ -13,7 +14,9 @@ const routes: Routes = [
 { path: 'shopping-cart-full', component: ShoppingCartFullsizeComponent },
 { path: 'details/:id', component: DetailsComponent },
 { path: 'checkout', component: CheckoutComponent },
-{ path: '', component: MovieShopComponent }
+{ path: '', component: MovieShopComponent },
+{ path: '**', component: NotFoundComponent }
+
 ];
 
 @NgModule({

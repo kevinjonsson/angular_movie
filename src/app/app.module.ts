@@ -14,6 +14,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShoppingCartFullsizeComponent } from './components/shopping-cart-fullsize/shopping-cart-fullsize.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ModalComponent } from './components/modal/modal.component';
     CheckoutComponent,
     AdminComponent,
     ShoppingCartFullsizeComponent,
-    ModalComponent
+    ModalComponent,
+    NotFoundComponent
   ],
   imports: [
     AppRoutingModule,
