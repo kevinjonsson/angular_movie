@@ -1,0 +1,24 @@
+<div class="main_wrap container-fluid d-flex justify-content-center">
+  <div class="content">
+    <h3>Admin</h3>
+    <div class="content_info" *ngFor="let item of allOrders">
+      <div>
+        <h3>Order</h3>
+        <p>Id: {{item.id}}</p>
+        <p>Company id: {{item.companyId}}</p>
+        <p>Created by: {{item.createdBy}}</p>
+        <p>Payment: {{item.paymentMethod}}</p>
+        <p>Created: {{item.created}}</p>
+        <p>Total price: {{item.totalPrice}}kr</p>
+        <button class="my_btn" type="submit" (click)="remove(item.id)"><i class="fas fa-trash-alt"></i> Delete
+          order</button>
+      </div>
+      <div class="products">
+        <h3>Products</h3>
+        <p *ngFor="let test of item.orderRows">
+          Product id: {{test.productId}}, amount: {{test.amount}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

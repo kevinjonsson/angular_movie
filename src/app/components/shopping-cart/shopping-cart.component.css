@@ -1,0 +1,84 @@
+.cart_container {
+  width: 100%;
+  height: 100%;
+}
+
+.cart {
+  height: 100%;
+}
+
+.cartInfo {
+  padding: 0 10px;
+  position: sticky;
+  top: 5rem;
+}
+
+.order {
+  overflow: scroll;
+  overflow-y: scroll;
+  height: 280px;
+}
+
+h2 {
+  font-weight: bold;
+  text-align: center;
+  color: rgb(58, 92, 141);
+  padding-top: 40px;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  padding-top: 1.5em;
+  color: rgb(245, 245, 245);
+  font-family: 'Lato', sans-serif;
+  margin-top: 20px;
+}
+
+h5 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgb(245, 245, 245);
+}
+
+p {
+  color: rgb(245, 245, 245);
+  font-size: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+hr {
+  background-color: white;
+}
+
+.my_btn {
+  width: 280px;
+  padding: 10px 10px 10px 0;
+  margin: 10px 0;
+}
+
+.fa-plus{
+  color: rgb(58, 92, 141);
+  cursor: pointer; 
+  padding: 10px;
+}
+
+.fa-minus{
+  color: rgb(58, 92, 141); 
+  cursor: pointer; 
+  padding: 10px;
+}
+
+.green{
+  background-color: darkgreen; 
+  border-color: black;
+}
+
+.red{
+  background-color: darkred; 
+  border-color: black;
+}
+
+/* rgba(30, 28, 49) */

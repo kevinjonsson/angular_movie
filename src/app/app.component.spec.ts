@@ -1,15 +1,29 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { MoviePresentationComponent } from './components/movie-presentation/movie-presentation.component';
+import { MovieShopComponent } from './components/movie-shop/movie-shop.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailsComponent } from './components/details/details.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        MoviePresentationComponent,
+        MovieShopComponent,
+        ShoppingCartComponent,
+        DetailsComponent,
+        ModalComponent
       ],
     }).compileComponents();
   }));
@@ -18,18 +32,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'angularMovie'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('angularMovie');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to angularMovie!');
   });
 });

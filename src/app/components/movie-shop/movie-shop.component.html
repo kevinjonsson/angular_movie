@@ -1,0 +1,31 @@
+<div class="container-fluid d-flex">
+  <div class="app">
+    <app-modal [show]="showModal" [customClass]="'custom_modal_class'" [closeCallback]="toggleModal">
+      <h2>You just added 1 item</h2>
+      <h4>{{addedItem.name}}</h4>
+      <img class="card-img-top" src="{{addedItem.imageUrl}}" alt="Card image cap">
+    </app-modal>
+  </div>
+  <div class="main_wrap">
+    <div class="header"></div>
+    <h3 class="categories">Action</h3>
+    <div class="main row">
+      <app-movie-presentation *ngFor="let product of actionMovie" [products]="product"></app-movie-presentation>
+    </div>
+    <h3 class="categories">Comedy</h3>
+    <div class="main row">
+      <app-movie-presentation *ngFor="let product of comedyMovie" [products]="product"></app-movie-presentation>
+    </div>
+    <h3 class="categories">Thriller</h3>
+    <div class="main row">
+      <app-movie-presentation *ngFor="let product of thrillerMovie" [products]="product"></app-movie-presentation>
+    </div>
+    <h3 class="categories">Sci-fi</h3>
+    <div class="main row">
+      <app-movie-presentation *ngFor="let product of sciFiMovie" [products]="product"></app-movie-presentation>
+    </div>
+  </div>
+  <div class="sidebar d-none d-md-block">
+    <app-shopping-cart></app-shopping-cart>
+  </div>
+</div>

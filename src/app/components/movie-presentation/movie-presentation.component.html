@@ -1,0 +1,12 @@
+<div class="card m-2">
+  <a class="image" [routerLink]="['/details', products.id]"><img class="card-img-top" src="{{products.imageUrl}}"
+      alt="Card image cap"></a>
+  <div class="card-body row justify-content-around">
+    <div class="buttom_card">
+      <button (click)="addToCart(products)" class="my_btn"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+    </div>
+    <div>
+      <p class="card-text mt-1">Price: {{products.price}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+.shopping-item a {
+  text-decoration: none;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.shopping-item {
+  padding: 1rem 0;
+}
+
+#searchDropdown {
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+h3 {
+  text-align: end;
+}
+
+.navbar {
+  background-color: rgb(5, 5, 5) !important;
+}
+
+.navbar-brand {
+  color: rgb(58, 92, 141);
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+}
+
+a {
+  color: white;
+}
+
+.search {
+  color: black !important
+}
+
+#searchDropdown {
+  background-color: rgb(226, 226, 226);
+  max-height: 240px;
+  overflow: scroll;
+  overflow-y: scroll;
+}
+
+h3 {
+  color: black;
+  padding: 15px 15px 0 15px;
+  cursor: pointer;
+}
+
+img {
+  width: 50px;
+}
+
+.searchResult {
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.searchClose {
+  color: black;
+  padding: 0 10px;
+}
+
+h3>.fas {
+  color: black;
+}
+
+.searchLink{
+  text-decoration: none;
+}
+
+.searchLink>p:hover{
+  color: rgb(58, 92, 141);
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #searchDropdown {
+    width: 300px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

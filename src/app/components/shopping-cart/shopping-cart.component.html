@@ -1,0 +1,19 @@
+<div class="cart_container">
+  <div class="cart">
+    <div class="cartInfo">
+      <h2>Shopping Cart</h2>
+      <hr>
+      <div class="order">
+        <div *ngFor="let cartMovie of cartMovies">
+          <p><a (click)="remove(cartMovie)"><i class="fas fa-minus"></i></a> {{cartMovie.amount}} <a
+              (click)="addToCart(cartMovie.movie)"><i class="fas fa-plus"></i></a> {{cartMovie.movie.name}} <br>
+            Price: {{cartMovie.amount * cartMovie.movie.price}} kr</p>
+          <hr>
+        </div>
+      </div>
+      <h3>Total price: {{totalPrice}} kr</h3>
+      <button class="my_btn green" routerLink="/checkout"><i class="fas fa-truck"></i> Checkout</button>
+      <button (click)="emptyCart()" class="my_btn red"><i class="fas fa-trash-alt"></i> Remove all</button>
+    </div>
+  </div>
+</div>

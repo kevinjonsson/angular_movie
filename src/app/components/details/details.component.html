@@ -1,0 +1,27 @@
+<div class="main_wrap container-fluid d-flex">
+  <div class="app">
+    <app-modal [show]="showModal" [customClass]="'custom_modal_class'" [closeCallback]="toggleModal">
+      <h2>You just added 1 item</h2>
+      <h4>{{addedItem.name}}</h4>
+      <img class="card-img-top" src="{{addedItem.imageUrl}}" alt="Card image cap">
+    </app-modal>
+  </div>
+  <div class="content">
+    <div class="row m-5" style="max-width: 40rem;">
+      <div class="col-md-6" style="padding: 0; height: 550px;">
+        <img class="product_image" src="{{product.imageUrl}}">
+      </div>
+      <div class="info col-md-6 p-4">
+        <h3 style="color:white;">{{product.name}}</h3>
+        <p>Description: {{product.description}}</p>
+        <p>Year: {{product.year}}</p>
+        <p>Added: {{product.added}}</p>
+        <p>Price: {{product.price}}</p>
+        <button (click)="addToCart(product)" class="my_btn"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar d-none d-lg-block">
+    <app-shopping-cart></app-shopping-cart>
+  </div>
+</div>
