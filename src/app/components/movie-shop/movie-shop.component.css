@@ -1,16 +1,20 @@
-.main{
+.container-fluid {
+  max-width: 100%;
+}
+
+.main {
   width: 100vw;
-  padding: 0!important;
-  margin: 0!important;
-  background-color: transparent!important;
-  background-image: url('../../../assets/images/646578.jpg'); 
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+  background-image: url('../../../assets/images/646578.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 
-  flex-wrap: nowrap!important; 
-  overflow: hidden!important; 
-  overflow-x: scroll!important; 
+  flex-wrap: nowrap !important;
+  overflow: hidden !important;
+  overflow-x: scroll !important;
 }
 
 .sidebar {
@@ -24,92 +28,83 @@
   width: 100%;
 }
 
-.header{
-  height: 80vh; 
-  background-image: url('../../../assets/images/646578.jpg'); 
+.header {
+  height: 80vh;
+  background-image: url('../../../assets/images/646578.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.categorys{
+.categories {
   color: white;
   max-width: 100%;
-  padding: 0 20px!important;
-  margin: 0!important;
-  background-color: transparent!important;
+  padding: 0 20px !important;
+  margin: 0 !important;
+  background-color: transparent !important;
   background-image: url('../../../assets/images/646578.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
+.card-img-top {
+  max-width: 15rem;
+  min-height: 20rem;
+  max-height: 20rem;
+}
+
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) { 
-  .main{
+@media only screen and (max-width: 600px) {
+  .main {
     max-width: 100%;
-    padding: 0!important;
-    margin: 0!important;
-    background-color: transparent!important;
-    background-image: url('../../../assets/images/646578.jpg'); 
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    background-image: url('../../../assets/images/646578.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 
-    flex-wrap: nowrap!important; 
-    overflow: hidden!important; 
-    overflow-x: scroll!important; 
-}
+    flex-wrap: nowrap !important;
+    overflow: hidden !important;
+    overflow-x: scroll !important;
+  }
 
-.sidebar {
+  .sidebar {
     min-width: 300px;
     max-width: 300px;
     display: table-cell;
-}
+  }
 
-.content {
+  .content {
     display: table-cell;
     width: 100%;
-}
+  }
 
-.header{
-    height: 80vh; 
-    background-image: url('../../../assets/images/646578.jpg'); 
+  .header {
+    height: 80vh;
+    background-image: url('../../../assets/images/646578.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+  }
 }
 
-  .hej{
-    color: white;
-    max-width: 100%;
-    padding: 0 20px!important;
-    margin: 0!important;
-    background-color: transparent!important;
-    background-image: url('../../../assets/images/646578.jpg'); 
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-} 
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-} 
+@media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .main{
-    width: calc(100vw - 300px)!important;
+  .main {
+    width: calc(100vw - 300px) !important;
   }
-} 
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  
-} 
+@media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}

@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { MockDataService } from './mock-data.service';
 
 describe('MockDataService', () => {

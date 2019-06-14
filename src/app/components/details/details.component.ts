@@ -12,12 +12,12 @@ import { MockDataService } from 'src/app/services/mock-data.service'
 })
 export class DetailsComponent implements OnInit {
 
-  product: IData = {id: 77, name: "Interstellar", description: 'hej', price: 50, imageUrl: 'image', year: 2003, added: '2018', productCategory:[{categoryId:8,category:null}]};
+  product: IData = { id: 77, name: "Interstellar", description: 'hej', price: 50, imageUrl: 'image', year: 2003, added: '2018', productCategory: [{ categoryId: 8, category: null }] };
 
-  addedItem = {movie: {id: 77, name: "Interstellar", description: 'hej', price: 50, year: 2003, added: '2018', productCategory:[{ categoryId:8, category:null}]}, amount: 2};
+  addedItem = { movie: { id: 77, name: "Interstellar", description: 'hej', price: 50, year: 2003, added: '2018', productCategory: [{ categoryId: 8, category: null }] }, amount: 2 };
 
   showModal = false;
-  
+
   constructor(private route: ActivatedRoute, private service: DataService, private _interactionService: InteractionService) { }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class DetailsComponent implements OnInit {
     });
   }
 
-  addToCart(movie){
+  addToCart(movie) {
     this._interactionService.sendCartProduct(movie);
     this.addedItem = movie;
     this.toggleModal();

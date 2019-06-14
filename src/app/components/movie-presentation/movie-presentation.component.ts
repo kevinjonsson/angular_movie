@@ -8,20 +8,19 @@ import { InteractionService } from 'src/app/services/interaction.service';
   styleUrls: ['./movie-presentation.component.css']
 })
 export class MoviePresentationComponent implements OnInit {
-  
+
   @Input() products: IData[];
 
-  constructor(private _interactionService: InteractionService) {}
+  showModal = false;
+
+  constructor(private _interactionService: InteractionService) { }
 
   ngOnInit() {
 
   }
 
-  showModal = false;
-
-  addToCart(movie){
+  addToCart(movie) {
     this.showModal = !this.showModal;
     this._interactionService.sendCartProduct(movie);
   }
-
 }

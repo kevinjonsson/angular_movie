@@ -11,21 +11,19 @@ export class AdminComponent implements OnInit {
 
   allOrders: IOrder[];
 
-  constructor(private service: DataService) 
-  { }
+  constructor(private service: DataService) { }
 
   ngOnInit() {
     this.loadOrders();
   }
 
-  loadOrders(){
-    this.service.getOrders().subscribe((data) => { this.allOrders = data; });
+  loadOrders() {
+    this.service.getOrders().subscribe((data) => { this.allOrders = data;  console.log(this.allOrders)});
   }
 
-  remove(id){
+  remove(id) {
     this.service.deleteOrder(id).subscribe(() => {
       this.loadOrders();
     });
   }
-
 }

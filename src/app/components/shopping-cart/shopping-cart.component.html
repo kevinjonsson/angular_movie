@@ -5,18 +5,15 @@
       <hr>
       <div class="order">
         <div *ngFor="let cartMovie of cartMovies">
-          <p><a style="color: rgb(58, 92, 141); cursor: pointer; padding: 10px;" (click)="remove(cartMovie)"><i
-                class="fas fa-minus" style="color: rgb(58, 92, 141);"></i></a> {{cartMovie.amount}} <a
-              style="color: rgb(58, 92, 141); cursor: pointer; padding: 10px;" (click)="addToCart(cartMovie.movie)"><i
-                class="fas fa-plus" style="color: rgb(58, 92, 141);"></i></a> {{cartMovie.movie.name}} <br>
+          <p><a (click)="remove(cartMovie)"><i class="fas fa-minus"></i></a> {{cartMovie.amount}} <a
+              (click)="addToCart(cartMovie.movie)"><i class="fas fa-plus"></i></a> {{cartMovie.movie.name}} <br>
             Price: {{cartMovie.amount * cartMovie.movie.price}} kr</p>
           <hr>
         </div>
       </div>
-      <h3 style="margin-top: 20px;">Total price: {{totalPrice}} kr</h3>
-      <button class="my_btn" style="background-color: darkgreen; border-color: black;" routerLink="/checkout"><i
-          class="fas fa-truck"></i> Checkout</button> <br>
-      <button (click)="emptyCart()" class="my_btn" style="background-color: darkred; border-color: black;"><i class="fas fa-trash-alt"></i> Remove all</button>
+      <h3>Total price: {{totalPrice}} kr</h3>
+      <button class="my_btn green" routerLink="/checkout"><i class="fas fa-truck"></i> Checkout</button>
+      <button (click)="emptyCart()" class="my_btn red"><i class="fas fa-trash-alt"></i> Remove all</button>
     </div>
   </div>
 </div>

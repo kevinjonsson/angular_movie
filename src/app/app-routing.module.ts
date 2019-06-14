@@ -9,13 +9,13 @@ import { ShoppingCartFullsizeComponent } from './components/shopping-cart-fullsi
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
-{ path: 'shopping-cart', component: ShoppingCartComponent },
-{ path: 'admin', component: AdminComponent },
-{ path: 'shopping-cart-full', component: ShoppingCartFullsizeComponent },
-{ path: 'details/:id', component: DetailsComponent },
-{ path: 'checkout', component: CheckoutComponent },
-{ path: '', component: MovieShopComponent },
-{ path: '**', component: NotFoundComponent }
+  { path: 'shopping-cart', component: ShoppingCartComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'shopping-cart-full', component: ShoppingCartFullsizeComponent },
+  { path: 'details/:id', component: DetailsComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: '', component: MovieShopComponent },
+  { path: '**', component: NotFoundComponent }
 
 ];
 

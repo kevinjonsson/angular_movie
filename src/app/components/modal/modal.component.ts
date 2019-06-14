@@ -15,5 +15,4 @@ export class ModalComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

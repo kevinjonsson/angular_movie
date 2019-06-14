@@ -12,17 +12,17 @@ import { ModalComponent } from '../modal/modal.component';
 describe('DetailsComponent', () => {
   let component: DetailsComponent;
   let fixture: ComponentFixture<DetailsComponent>;
-  let activatedRoute = new ActivatedRouteStub({id: 1})
+  let activatedRoute = new ActivatedRouteStub({ id: 1 })
 
   beforeEach(async(() => {
-    activatedRoute.setParamMap({id: 1});
+    activatedRoute.setParamMap({ id: 1 });
     TestBed.configureTestingModule({
-      declarations: [ DetailsComponent, ShoppingCartComponent, ModalComponent ],
+      declarations: [DetailsComponent, ShoppingCartComponent, ModalComponent],
       imports: [RouterTestingModule, HttpClientModule],
-      providers: [{provide: activatedRoute, useValue: activatedRoute},
-      {provide: DataService, useClass: MockDataService}]
+      providers: [{ provide: activatedRoute, useValue: activatedRoute },
+      { provide: DataService, useClass: MockDataService }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

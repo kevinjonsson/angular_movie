@@ -1,7 +1,6 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background-color: rgb(5, 5, 5)!important;">
-    <a class="navbar-brand" routerLink=""
-      style="color: rgb(58, 92, 141); font-size: 2rem; font-family: 'Great Vibes', cursive;">FlexMovie</a>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">FlexMovie</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
       aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,8 +9,8 @@
       <div class="navbar-nav mr-auto"></div>
       <ul class="navbar-nav mr-3">
         <li class="shopping-item"><a routerLink="/admin"><i class="fas fa-user-cog"></i></a></li>
-        <li class="shopping-item"><a routerLink="/shopping-cart-full" style="color: white;"><i
-              class="fas fa-shopping-cart"></i> {{cartItem}}</a></li>
+        <li class="shopping-item"><a routerLink="/shopping-cart-full"><i class="fas fa-shopping-cart"></i>
+            {{cartItem}}</a></li>
       </ul>
       <div class="form-inline mt-2 mt-md-0">
         <input (keyup)="searchMovie(searchBox.value)" #searchBox class="form-control mr-sm-2" type="text"
@@ -20,14 +19,12 @@
       </div>
     </div>
   </nav>
-  <div class="d-flex justify-content-end" style="color:black!important">
-    <div id="searchDropdown" style="background-color: rgb(226, 226, 226); max-height: 240px; overflow: scroll; overflow-y: scroll; ">
-      <h3 style="color:black; padding: 15px 15px 0 15px;" (click)="closeWindow()"><i class="fas fa-times"
-          style="color:black; cursor: pointer;"></i></h3>
+  <div class="search d-flex justify-content-end">
+    <div id="searchDropdown">
+      <h3 (click)="closeWindow()"><i class="fas fa-times"></i></h3>
       <hr>
-      <div style="color:black; padding: 0 10px;" *ngFor="let item of searchValue"><a (click)="closeWindow()" [routerLink]="['/details', item.id]">
-          <img style="width: 50px;" src="{{item.imageUrl}}" alt="img">
-          <p style="color:black; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{item.name}}</p>
+      <div class="searchClose" *ngFor="let item of searchValue"><a class="searchLink" (click)="closeWindow()" [routerLink]="['/details', item.id]">
+          <p class="searchResult"><img src="{{item.imageUrl}}" alt="img"> {{item.name}}</p>
           <hr>
         </a></div>
     </div>

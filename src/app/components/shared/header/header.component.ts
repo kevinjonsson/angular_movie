@@ -18,11 +18,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.cartItem = JSON.parse(localStorage.getItem("cartItem"));
-    
+
     this._interactionService.cartItems$.subscribe(
-      item => {   
+      item => {
         this.cartItem = 0;
-        for (let i = 0; i < item.length; i++){
+        for (let i = 0; i < item.length; i++) {
           this.cartItem += item[i].amount;
         }
         localStorage.setItem('cartItem', JSON.stringify(this.cartItem));
@@ -31,18 +31,18 @@ export class HeaderComponent implements OnInit {
     this.closeWindow();
   }
 
-  searchMovie(searchValue){
-    if(searchValue.length < 2){
+  searchMovie(searchValue) {
+    if (searchValue.length < 2) {
       searchValue = "bla";
-    }else{
+    } else {
       this.service.getSearch(searchValue).subscribe((data) => { this.searchValue = data; });
-    
+
       var x = document.getElementById("searchDropdown");
       x.style.display = "block";
     }
   }
 
-  closeWindow(){
+  closeWindow() {
     var x = document.getElementById("searchDropdown");
     x.style.display = "none";
   }

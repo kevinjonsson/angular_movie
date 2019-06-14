@@ -1,14 +1,14 @@
 import { Observable } from "rxjs";
 import { IData } from "./IData";
 import { IOrder } from './IOrder';
-import { ICategorys } from './ICategorys';
+import { ICategories } from './ICategories';
 
 export interface IDataService {
   getData(): Observable<IData[]>;
   getOrders(): Observable<IOrder[]>;
   getProductData(myId): Observable<IData>;
   postOrders(newOrder): Observable<IOrder>;
-  getCategorys(): Observable<ICategorys[]>;
-  getSearch(search): Observable<any>;
-  deleteOrder(id:number): Observable<any>;
+  getCategories(): Observable<ICategories[]>;
+  getSearch(search): Observable<IData[]>;
+  deleteOrder(id): Observable<IOrder>;
 }

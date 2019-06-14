@@ -12,17 +12,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from '../modal/modal.component';
 
 
-  describe('CheckoutComponent', () => {
-    let component: CheckoutComponent;
-    let fixture: ComponentFixture<CheckoutComponent>;
+describe('CheckoutComponent', () => {
+  let component: CheckoutComponent;
+  let fixture: ComponentFixture<CheckoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CheckoutComponent, ShoppingCartComponent, MovieShopComponent, MoviePresentationComponent, ModalComponent ],
+      declarations: [CheckoutComponent, ShoppingCartComponent, MovieShopComponent, MoviePresentationComponent, ModalComponent],
       imports: [RouterTestingModule, HttpClientModule, ReactiveFormsModule],
-      providers: [{provide: DataService, useClass: MockDataService}]
+      providers: [{ provide: DataService, useClass: MockDataService }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

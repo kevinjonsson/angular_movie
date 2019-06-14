@@ -1,26 +1,24 @@
-<div class="app">
-  <app-modal [show]="showModal" [customClass]="'custom_modal_class'" [closeCallback]="toggleModal">
-    <h2>Your order has been sent</h2>
-    <img class="card-img-top" style="max-width: 15rem;"
-          src="../../../assets/images/1248f5ec9e.png" alt="Card image cap"><br><br>
-    <button class="my_btn" style="background-color: green;" routerLink="/">Home</button>
-  </app-modal>
-</div>
 <div class="main container-fluid d-flex justify-content-center">
+  <div class="app">
+    <app-modal [show]="showModal" [customClass]="'custom_modal_class'" [closeCallback]="toggleModal">
+      <h2>Your order has been sent</h2>
+      <img class="card-img-top" src="../../../assets/images/1248f5ec9e.png" alt="Card image cap"><br>
+      <button class="my_btn" routerLink="/">Continue</button>
+    </app-modal>
+  </div>
   <div class="form_container">
-    
     <form class="form" [formGroup]="profileForm">
-        <h3 style="color: white">Your Orders:</h3>
-      <div style="margin-bottom: 20px; height: 140px; overflow: scroll; overflow-y: scroll;">
-        <div *ngFor="let orderMovies of cartMovies">
-            Movie: {{orderMovies.movie.name}} <br> Price: {{orderMovies.movie.price}} kr/st <br> Amount: {{orderMovies.amount}} <br><br>
-          </div>
+      <h3>Your Orders:</h3>
+      <div class="product">
+        <ul *ngFor="let orderMovies of cartMovies">
+          <li>Movie: {{orderMovies.movie.name}}</li>
+          <li>Price: {{orderMovies.movie.price}} kr/st</li>
+          <li>Amount: {{orderMovies.amount}}</li>
+        </ul>
       </div>
       <div class="form_group">
-        <h3 style="color: white">Total price: {{totalPrice}} kr</h3>
-        <br>
-
-        <h3 style="color: white">Information:</h3>
+        <h3>Total price: {{totalPrice}} kr</h3>
+        <h3>Information:</h3>
         <label for="name">
           Name:
           <input type="text" formControlName="name" required #name id="name">

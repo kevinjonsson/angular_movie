@@ -4,21 +4,21 @@ import { IDataService } from '../interfaces/IDataService';
 import { Observable } from 'rxjs';
 import { IData } from '../interfaces/IData';
 import { IOrder } from '../interfaces/IOrder';
-import { ICategorys } from '../interfaces/ICategorys';
+import { ICategories } from '../interfaces/ICategories';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class DataService implements IDataService {
-    constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-    getData(): Observable<IData[]> {
+  getData(): Observable<IData[]> {
     return this.http.get<IData[]>('https://medieinstitutet-wie-products.azurewebsites.net/api/products');
   }
 
   getProductData(myId): Observable<IData> {
-    return this.http.get<IData>('https://medieinstitutet-wie-products.azurewebsites.net/api/products/'+myId);
+    return this.http.get<IData>('https://medieinstitutet-wie-products.azurewebsites.net/api/products/' + myId);
   }
 
   getOrders(): Observable<IOrder[]> {
@@ -26,18 +26,18 @@ export class DataService implements IDataService {
   }
 
   postOrders(newOrder): Observable<IOrder> {
-    return this.http.post<IOrder>('https://medieinstitutet-wie-products.azurewebsites.net/api/orders',newOrder);
+    return this.http.post<IOrder>('https://medieinstitutet-wie-products.azurewebsites.net/api/orders', newOrder);
   }
 
-  getCategorys(): Observable<ICategorys[]> {
-    return this.http.get<ICategorys[]>('https://medieinstitutet-wie-products.azurewebsites.net/api/categories');
+  getCategories(): Observable<ICategories[]> {
+    return this.http.get<ICategories[]>('https://medieinstitutet-wie-products.azurewebsites.net/api/Categories');
   }
 
-  getSearch(search): Observable<any>{
-    return this.http.get('https://medieinstitutet-wie-products.azurewebsites.net/api/search?='+search);
+  getSearch(search): Observable<IData[]> {
+    return this.http.get<IData[]>('https://medieinstitutet-wie-products.azurewebsites.net/api/search?=' + search);
   }
 
-  deleteOrder(id:number): Observable<any>{
+  deleteOrder(id: number): Observable<IOrder> {
     return this.http.delete<IOrder>('https://medieinstitutet-wie-products.azurewebsites.net/api/orders' + '/' + id);
   }
 

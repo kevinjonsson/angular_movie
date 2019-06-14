@@ -1,34 +1,59 @@
-.main{
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-image: url('../../../assets/images/646578.jpg'); 
-    min-height: 92.5vh;
+.main {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../../assets/images/646578.jpg');
+  min-height: 92.5vh;
 }
 
-.form_container{
-    margin-top: 100px;
-    height: 100%;
-    width: 100%;
-    margin: auto;
+.form_container {
+  margin-top: 100px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
 }
 
-.form{
-    max-width: 700px;
-    padding: 8rem;
-    background-color: rgba(0, 0, 0, 0.699);
-    border-radius: 5px;
-    color: white;
-    margin: 0 auto;
+.form {
+  max-width: 700px;
+  padding: 8rem;
+  background-color: rgba(0, 0, 0, 0.699);
+  border-radius: 5px;
+  color: white;
+  margin: 0 auto;
 }
 
-select{
-    background-color: black;
-    color: white;
+select {
+  background-color: black;
+  color: white;
 }
 
-input{
-    background-color: transparent;
-    border: none;
-    color: white;
-    border-bottom: 1px solid white;
+input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.my_btn {
+  background-color: green;
+  margin-top: 10px;
+}
+
+.card-img-top {
+  max-width: 15rem;
+}
+
+h3 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.product {
+  margin-bottom: 20px;
+  height: 140px;
+  overflow: scroll;
+  overflow-y: scroll;
+}
+
+li{
+  list-style-type: none;
 }

@@ -1,4 +1,4 @@
-export interface IProductCategory{
+export interface IProductCategory {
     categoryId: number;
     category: boolean;
 }

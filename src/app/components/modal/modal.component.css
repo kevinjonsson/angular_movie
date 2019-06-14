@@ -1,17 +1,17 @@
-.modal_content{
-    background-color: rgba(255, 255, 255, 0.966);
-    text-align: center;
-    width: 350px;
-    margin: 200px auto;
-    padding: 15px 15px 30px 15px;
-    border-radius: 5px;
+.modal_content {
+  background-color: rgba(255, 255, 255, 0.966);
+  text-align: center;
+  width: 350px;
+  margin: 200px auto;
+  padding: 15px 15px 30px 15px;
+  border-radius: 5px;
 }
 
-.closeBtn{
-    text-align: end;
-    cursor: pointer;
+.closeBtn {
+  text-align: end;
+  cursor: pointer;
 }
 
-i{
-    color: black;
+i {
+  color: black;
 }

@@ -13,10 +13,10 @@ describe('MoviePresentationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MoviePresentationComponent, TestHostComponent, MovieShopComponent, ShoppingCartComponent, ModalComponent ],
+      declarations: [MoviePresentationComponent, TestHostComponent, MovieShopComponent, ShoppingCartComponent, ModalComponent],
       imports: [RouterTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

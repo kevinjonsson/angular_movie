@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MovieShopComponent } from './movie-shop.component';
 import { MoviePresentationComponent } from '../movie-presentation/movie-presentation.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,18 +9,18 @@ import { MockDataService } from 'src/app/services/mock-data.service';
 import { ModalComponent } from '../modal/modal.component';
 
 
-  describe('MovieShopComponent', () => {
-    let component: MovieShopComponent;
-    let fixture: ComponentFixture<MovieShopComponent>;
+describe('MovieShopComponent', () => {
+  let component: MovieShopComponent;
+  let fixture: ComponentFixture<MovieShopComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovieShopComponent, ShoppingCartComponent, MoviePresentationComponent, ModalComponent ],
+      declarations: [MovieShopComponent, ShoppingCartComponent, MoviePresentationComponent, ModalComponent],
       imports: [RouterTestingModule, HttpClientModule],
       providers: [
-      {provide: DataService, useClass: MockDataService}]
+        { provide: DataService, useClass: MockDataService }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -44,6 +43,6 @@ import { ModalComponent } from '../modal/modal.component';
   it('should create 4 categories', () => {
     fixture = TestBed.createComponent(MovieShopComponent);
     component = fixture.componentInstance;
-    expect(component.categorys.length).toBe(4);
+    expect(component.categories.length).toBe(4);
   });
 });

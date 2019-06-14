@@ -10,9 +10,9 @@ describe('ShoppingCartFullsizeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShoppingCartFullsizeComponent ]
+      declarations: [ShoppingCartFullsizeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -30,34 +30,34 @@ describe('ShoppingCartFullsizeComponent', () => {
     component.clearLocal();
     expect(component.cartMovies.length).toEqual(0);
     const service = new MockDataService();
-    service.getData().subscribe((products) =>{
-    component.addToCart(products[0]);
-    expect(component.cartMovies.length).toEqual(1);
-    component.clearLocal();
+    service.getData().subscribe((products) => {
+      component.addToCart(products[0]);
+      expect(component.cartMovies.length).toEqual(1);
+      component.clearLocal();
     });
   });
 
   it('should add two diffrent movies', () => {
 
     const service = new MockDataService();
-    service.getData().subscribe((products) =>{
-    component.addToCart(products[0]);
-    component.addToCart(products[1]);
+    service.getData().subscribe((products) => {
+      component.addToCart(products[0]);
+      component.addToCart(products[1]);
 
-    expect(component.cartMovies.length).toEqual(2);
-    component.clearLocal();
+      expect(component.cartMovies.length).toEqual(2);
+      component.clearLocal();
     });
   });
 
   it('should add amount of the same movie', () => {
 
     const service = new MockDataService();
-    service.getData().subscribe((products) =>{
-    component.addToCart(products[0]);
-    component.addToCart(products[0]);
+    service.getData().subscribe((products) => {
+      component.addToCart(products[0]);
+      component.addToCart(products[0]);
 
-    expect(component.cartMovies.length).toEqual(1);
-    component.clearLocal();
+      expect(component.cartMovies.length).toEqual(1);
+      component.clearLocal();
     });
   });
 
@@ -65,9 +65,9 @@ describe('ShoppingCartFullsizeComponent', () => {
     component.clearLocal();
     component.setLocal();
     const service = new MockDataService();
-    service.getproductsWithAmount().subscribe((product) =>{
-    component.remove(product[0]);
-    expect(component.cartMovies[0].amount).toEqual(1);
+    service.getproductsWithAmount().subscribe((product) => {
+      component.remove(product[0]);
+      expect(component.cartMovies[0].amount).toEqual(1);
 
     });
   });
@@ -75,10 +75,10 @@ describe('ShoppingCartFullsizeComponent', () => {
   it('should uppdate totalPrice to amount * price', () => {
     component.clearLocal();
     const service = new MockDataService();
-    service.getproductsWithAmount().subscribe((products: ICartProduct[]) =>{
-    component.totalPriceFunction(products);
-    expect(component.totalPrice).toEqual(150);
+    service.getproductsWithAmount().subscribe((products: ICartProduct[]) => {
+      component.totalPriceFunction(products);
+      expect(component.totalPrice).toEqual(150);
 
+    });
   });
-});
 });

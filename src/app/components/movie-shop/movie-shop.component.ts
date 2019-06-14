@@ -3,7 +3,7 @@ import { DataService } from 'src/app/services/data.service';
 import { IData } from 'src/app/interfaces/IData';
 import { MockDataService } from 'src/app/services/mock-data.service';
 import { InteractionService } from 'src/app/services/interaction.service';
-import { ICategorys } from 'src/app/interfaces/ICategorys';
+import { ICategories } from 'src/app/interfaces/ICategories';
 
 @Component({
   selector: 'app-movie-shop',
@@ -13,7 +13,7 @@ import { ICategorys } from 'src/app/interfaces/ICategorys';
 export class MovieShopComponent implements OnInit {
 
   products: IData[] = [];
-  categorys: ICategorys[];
+  categories: ICategories[];
 
   actionMovie: IData[] = [];
   thrillerMovie: IData[] = [];
@@ -21,45 +21,45 @@ export class MovieShopComponent implements OnInit {
   sciFiMovie: IData[] = [];
 
 
-  addedItem = {movie: {id: 77, name: "Interstellar", description: 'hej', price: 50, year: 2003, added: '2018', productCategory:[{ categoryId:8, category:null}]}, amount: 2};
+  addedItem = { movie: { id: 77, name: "Interstellar", description: 'hej', price: 50, year: 2003, added: '2018', productCategory: [{ categoryId: 8, category: null }] }, amount: 2 };
   title = 'modal-app';
   showModal = false;
 
   constructor(service: DataService, private _interactionService: InteractionService) {
-    service.getCategorys().subscribe((dataCategory) => { 
-      this.categorys = dataCategory; 
-      service.getData().subscribe((data) => { this.products = data; this.sortCategorys(); });
+    service.getCategories().subscribe((dataCategory) => {
+      this.categories = dataCategory;
+      service.getData().subscribe((data) => { this.products = data; this.sortCategories(); });
     });
-   }
+  }
 
   ngOnInit() {
-    
+
     this._interactionService.cartMovie$.subscribe(
       movie => {
-          this.addedItem = movie;
-          this.toggleModal();
+        this.addedItem = movie;
+        this.toggleModal();
       }
     )
   }
-  
+
   toggleModal = () => {
     this.showModal = !this.showModal;
   }
 
-  sortCategorys(){
-    for (let a = 0; a < this.products.length; a++){
+  sortCategories() {
+    for (let a = 0; a < this.products.length; a++) {
       var movieCategory = this.products[a].productCategory;
-      for(let b = 0; b < movieCategory.length; b++){
-        if( movieCategory[b].categoryId === this.categorys[0].id){
+      for (let b = 0; b < movieCategory.length; b++) {
+        if (movieCategory[b].categoryId === this.categories[0].id) {
           this.actionMovie.push(this.products[a]);
         }
-        if( movieCategory[b].categoryId === this.categorys[1].id){
+        if (movieCategory[b].categoryId === this.categories[1].id) {
           this.thrillerMovie.push(this.products[a]);
         }
-        if( movieCategory[b].categoryId === this.categorys[2].id){
+        if (movieCategory[b].categoryId === this.categories[2].id) {
           this.comedyMovie.push(this.products[a]);
         }
-        if( movieCategory[b].categoryId === this.categorys[3].id){
+        if (movieCategory[b].categoryId === this.categories[3].id) {
           this.sciFiMovie.push(this.products[a]);
         }
       }
